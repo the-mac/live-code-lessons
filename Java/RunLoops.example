@@ -1,0 +1,183 @@
+
+class RunLoops {
+
+    public static void runWithWhileLoop() {
+        System.out.println("Called runWithWhileLoop");
+
+        Random random = new Random();
+        int response = random.nextInt(100);
+        
+        while(response % 4 != 0) {
+            System.out.println("Random Response: " + response);
+            response = random.nextInt(100);
+        }
+        System.out.println("Final Random: " + response);
+        System.out.println();
+    }
+
+    public static void runWithDoWhileLoop() {
+        System.out.println("Called runWithDoWhileLoop");
+
+        Random random = new Random();
+        int response = random.nextInt(100);
+        do {
+            System.out.println("Random Response: " + response);
+            response = random.nextInt(100);
+        } while(response % 2 != 0);
+        System.out.println("Final Random: " + response);
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void runWithForLoops() {
+        System.out.println("Called runWithForLoops");
+
+        for(int index = 0; index < 10; index++) {
+            if(index == 0) {
+                System.out.printf("%2d", index);
+            } else {
+                System.out.printf(", %2d", index);
+            }
+        }
+        System.out.println();
+
+        for(int index = 10; index > 0; index--) {
+            if(index == 10) {
+                System.out.printf("%2d", index);
+            } else {
+                System.out.printf(", %2d", index);
+            }
+        }
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void runWithNestedLoops() {
+        System.out.println("Called runWithNestedLoops");
+        System.out.println();
+
+        for(int iIndex = 0; iIndex < 10; iIndex++) {
+                
+            int decimal = iIndex * 10;
+            for(int jIndex = 0; jIndex < 10; jIndex++) {
+                
+                int sum = decimal + jIndex + 1;
+
+                if(jIndex == 0) {
+                    System.out.printf("%3d", sum);
+                } else {
+                    System.out.printf(", %3d", sum);
+                }
+
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+class RunLoops {
+
+    public static void runWithWhileLoop() {
+        System.out.println("Called runWithWhileLoop");
+
+        Random random = new Random();
+        int response = random.nextInt(100);
+        
+        while(response % 4 != 0) {
+            System.out.println("Random Response: " + response);
+            response = random.nextInt(100);
+        }
+        System.out.println("Final Random: " + response);
+        System.out.println();
+    }
+
+    public static void runWithDoWhileLoop() {
+        System.out.println("Called runWithDoWhileLoop");
+
+        Random random = new Random();
+        int response = random.nextInt(100);
+        do {
+            System.out.println("Random Response: " + response);
+            response = random.nextInt(100);
+        } while(response % 2 != 0);
+        System.out.println("Final Random: " + response);
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void runWithForLoops() {
+        System.out.println("Called runWithForLoops");
+
+        System.out.print("Continue: ");
+        for(int index = 0; index < 10; index++) {
+            if(index == 5) {
+                continue;
+            } else if(index == 0) {
+                System.out.printf("%2d", index);
+            } else {
+                System.out.printf(", %2d", index);
+            }
+        }
+        System.out.println();
+
+        System.out.print("Break: ");
+        for(int index = 10; index > 0; index--) {
+            if(index == 5) {
+                break;
+            } else if(index == 10) {
+                System.out.printf("%2d", index);
+            } else {
+                System.out.printf(", %2d", index);
+            }
+        }
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void runWithNestedLoops() {
+        System.out.println("Called runWithNestedLoops");
+        System.out.println();
+
+        Random random = new Random();
+        int response = random.nextInt(100);
+
+        System.out.println("Returning On: " + response);
+        System.out.println();
+
+        for(int iIndex = 0; iIndex < 10; iIndex++) {
+                
+            int decimal = iIndex * 10;
+            for(int jIndex = 0; jIndex < 10; jIndex++) {
+                
+                int sum = decimal + jIndex + 1;
+
+                if(jIndex == 0) {
+                    System.out.printf("%3d", sum);
+                } else {
+                    System.out.printf(", %3d", sum);
+                }
+
+                if(response == sum) {
+                    return;
+                }
+
+            }
+            System.out.println();
+        }
+    }
+    
+}
+public class Main {
+    public static void main(String[] args) {
+        System.out.println();
+        System.out.println("Hello Live Lessons");
+        System.out.println();
+
+        RunLoops.runWithWhileLoop();
+        RunLoops.runWithDoWhileLoop();
+        RunLoops.runWithForLoops();
+        RunLoops.runWithNestedLoops();
+
+    }
+}
