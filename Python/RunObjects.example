@@ -1,0 +1,60 @@
+
+# - What is a Python Object, and how can it be used?
+
+class Shoe:
+
+    # Attributes
+    __color = "red"
+    has_laces = False
+    _is_for_running = False
+
+    # Constructor
+    def __init__(self, color):
+        self.__color = color
+    
+    # Methods
+    def set_color(self, color: str):
+        self.__color = color
+
+    def set_for_running(self, is_for_running: bool):
+        self._is_for_running = is_for_running
+
+class Sneaker(Shoe):
+
+    # Constructor
+    def __init__(self, color):
+        self.set_color(color)
+
+
+def main():
+    print("")
+    print("Hello Live Lessons")
+    print("")
+
+    shoe1 = Shoe("red")
+    shoe1.has_laces = True
+    shoe1.set_color("green")
+
+    shoe2 = Shoe("blue")
+    shoe2.set_for_running(True)
+
+    sneaker1 = Sneaker("yellow")
+    sneaker1.set_for_running(True)
+    sneaker1.has_laces = True
+
+
+
+# - What is an attribute?
+
+# -- What color is the shoe?
+
+# -- Has laces?
+
+# -- Is for running?
+
+# - What is a constructor?
+
+# - What is encapsulation?
+
+
+main()
