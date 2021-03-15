@@ -1,9 +1,3 @@
-# Do you have a question about python programming?
-
-# You can ask them live, and get feedback during the lesson. 
-
-# Or, if you have a new topic you are interested in asking questions about, we are taking lesson suggestion here: https://git.io/JqF3D
-
 # Hi, today's lesson is going to be on Python Objects
 
 # - More specifically what is a Python Object, and how can it be used?
@@ -22,6 +16,17 @@
 # - What is a modifier?
 
 # - What is encapsulation?
+
+# Let's get started:
+
+# - Here is a visual that will help with the Object concept, and it's possible related nouns
+
+# - A shoe can have a sole
+
+# - A shoe can have laces
+
+# - A shoe can be for running / relaxation
+
 
 class Shoe:
 
@@ -93,6 +98,12 @@ def main():
 
 
 # QUESTIONS: Q & A
+
+# Do you have a question about python programming?
+
+# You can ask them live, and get feedback during the lesson. 
+
+# Or, if you have a new topic you are interested in asking questions about, we are taking lesson suggestion here: https://git.io/JqF3D
 
 # NEXT LESSON: What are python data types?
 
