@@ -1,5 +1,22 @@
 
+# Hi, today's lesson is going to be on Python Objects
+
 # - What is a Python Object, and how can it be used?
+
+# Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function. 
+# So, attributes like Strings are objects, All methods have a built-in attribute __doc__ making them objects as well. 
+
+# In this lesson we will cover:
+
+# - What is an attribute?
+
+# - What is a constructor?
+
+# - What is a method?
+
+# - What is a modifier?
+
+# - What is encapsulation?
 
 class Shoe:
 
@@ -54,7 +71,6 @@ def main():
     print(shoe1)
 
     sneaker1 = Sneaker("yellow")
-    sneaker1.set_for_running(True)
     sneaker1.has_laces = True
     print(sneaker1)
 
