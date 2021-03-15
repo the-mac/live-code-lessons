@@ -4,26 +4,39 @@
 class Shoe:
 
     # Attributes
-    __color = "red"
-    has_laces = False
-    _is_for_running = False
+    __color = "red" # Private
+    has_laces = False # Public
+    _is_for_running = False # Protected
 
     # Constructor
     def __init__(self, color):
         self.__color = color
     
     # Methods
-    def set_color(self, color: str):
+    def set_color(self, color):
         self.__color = color
 
-    def set_for_running(self, is_for_running: bool):
+    def set_for_running(self, is_for_running):
         self._is_for_running = is_for_running
+
+    def __str__(self):
+        return 'Shoe Color: %s \nLaces: %s \nRunning:  %s \n' % (
+            self.__color, self.has_laces, self._is_for_running
+        )
 
 class Sneaker(Shoe):
 
+	# Attributes that can not be accessed
+    # __color = "red" # Private
+
+    # Attributes that can be accessed
+    # has_laces = False # Public
+    # _is_for_running = False # Protected
+    
     # Constructor
     def __init__(self, color):
         self.set_color(color)
+        _is_for_running = True
 
 
 def main():
@@ -34,27 +47,35 @@ def main():
     shoe1 = Shoe("red")
     shoe1.has_laces = True
     shoe1.set_color("green")
+    print(shoe1)
 
     shoe2 = Shoe("blue")
     shoe2.set_for_running(True)
+    print(shoe1)
 
     sneaker1 = Sneaker("yellow")
     sneaker1.set_for_running(True)
     sneaker1.has_laces = True
+    print(sneaker1)
 
 
 
 # - What is an attribute?
 
-# -- What color is the shoe?
-
-# -- Has laces?
-
-# -- Is for running?
-
 # - What is a constructor?
 
+# - What is a method?
+
+# - What is a modifier?
+
 # - What is encapsulation?
+
+
+# QUESTIONS: Q & A
+
+# NEXT LESSON: What are python data types?
+
+# LESSON SUGGESTIONS: https://git.io/JqF3D
 
 
 main()
