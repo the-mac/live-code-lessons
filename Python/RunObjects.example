@@ -6,7 +6,7 @@
 
 # Hi, today's lesson is going to be on Python Objects
 
-# - What is a Python Object, and how can it be used?
+# - More specifically what is a Python Object, and how can it be used?
 
 # Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function. 
 # So, attributes like Strings are objects, All methods have a built-in attribute __doc__ making them objects as well. 
