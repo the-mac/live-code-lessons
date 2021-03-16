@@ -1,11 +1,11 @@
-# Hi, today's lesson is going to be on Python Objects
+# Hi, today's lesson is going to be on Data Types
 
-# - More specifically what is a Python Object, and how can it be used?
-
-# Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function. 
-# So, attributes like Strings are objects, All methods have a built-in attribute __doc__ making them objects as well. 
+# - More specifically what are Data Types, and how can they be used?
 
 # In this lesson we will cover:
+
+# Declaring / initializing a few variables, and variables are where we store data of different types, 
+# and different types can do different things. For instance, in the types we will cover in code:
 
 # - bool
 
