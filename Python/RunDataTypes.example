@@ -1,0 +1,95 @@
+
+# - What are Python Data Types, and how can they be used?
+
+def main():
+    print("")
+    print("Hello Live Lessons")
+    print("")
+
+    is_lesson_started = True
+    print("Lesson Started: %s" % is_lesson_started)
+    print("")
+
+    total_number_of_runs = 5
+    expected_number_of_runs = 15
+
+    sum01 = total_number_of_runs + 2.0
+    sum02 = total_number_of_runs + 2.1
+
+    print("Sum 1 %s" % sum01)
+    print("Sum 2 %s" % sum02)
+    print("")
+
+    evaluation = 'Evaluation'
+    adjustment = evaluation.replace('a', 'o')
+    evolution = adjustment[0:5] + adjustment[6:]
+
+    print("Evaluation %s" % evaluation)
+    print("Adjustment %s" % adjustment)
+    print("Evolution %s" % evolution)
+    print("")
+
+    intermediateBoolList = [True, False, True]
+
+    print("First Bool: %s\nSecond Bool: %s\nThird Bool: %s\n" % (
+        intermediateBoolList[0],
+        intermediateBoolList[1],
+        intermediateBoolList[2]
+    ))
+    
+    intermediateBoolList[0] = False
+    intermediateBoolList[1] = False
+    intermediateBoolList[2] = False
+
+    print("First Bool: %s\nSecond Bool: %s\nThird Bool: %s\n" % (
+        intermediateBoolList[0],
+        intermediateBoolList[1],
+        intermediateBoolList[2]
+    ))
+
+    intermediateFloatList = [sum01, sum02, sum01 + sum02]
+    
+    print("First Float: %s\nSecond Float: %s\nThird Float: %s\n" % (
+        intermediateFloatList[0],
+        intermediateFloatList[1],
+        intermediateFloatList[2]
+    ))
+    
+    intermediateFloatList[0] *= 2
+    intermediateFloatList[1] *= 2
+    intermediateFloatList[2] *= 2
+
+    print("First Float: %s\nSecond Float: %s\nThird Float: %s\n" % (
+        intermediateFloatList[0],
+        intermediateFloatList[1],
+        intermediateFloatList[2]
+    ))
+
+    is_lesson_ended = sum02 > sum01
+    print("Lesson Ended: %s" % is_lesson_ended)
+    print("")
+
+# - bool
+
+# - int
+
+# - float
+
+# - str
+
+# - bool list
+
+# - str list
+
+
+# QUESTIONS: Q & A
+
+# NEXT LESSON: What are Python Collections?
+
+# LESSON SUGGESTIONS: https://git.io/JqF3D
+
+
+main()
+
+
+# https://www.w3schools.com/python/python_datatypes.asp
