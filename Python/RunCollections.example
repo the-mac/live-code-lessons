@@ -1,0 +1,133 @@
+# Hi, today's lesson is going to be on Collections
+
+# - More specifically what are Collections, and how can they be used?
+
+# In this lesson we will cover:
+
+# The four collection data types in the Python programming language:
+
+# - List is a collection which is ordered and changeable. Allows duplicate members.
+
+# - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+
+# - Set is a collection which is unordered and unindexed. No duplicate members.
+
+# - Dictionary is a collection which is unordered and changeable. No duplicate members.
+
+# - What are Python Collections, and how can they be used?
+
+def main():
+    print("")
+    print("Hello Live Lessons")
+    print("")
+
+    # MUTABLE
+    intList = []
+    intList.append(11)
+    intList.append(22)
+    intList.append(33)
+    intList.append(44)
+    print("Int List: %s" % intList)
+    print("")
+
+    del intList[1]
+    intList.append(23)
+
+    # IMMUTABLE
+    tupleOfStrings = ("eleven", "twentytwo", "thirtythree", "fortyfour")
+    print("String Tuple: (%s, %s, %s, %s)" % tupleOfStrings)
+    print("")
+
+    eleven, twentytwo, thirtythree, fortyfour = tupleOfStrings
+    print("String From Tuple: %s" % fortyfour)
+    print("")
+
+    stringTuple = '(11,22,33,44)'
+
+    convertedTuple = eval(stringTuple)
+    print("Converted Tuple: (%s, %s, %s, %s)" % convertedTuple)
+    print("")
+
+
+    newTuple = convertedTuple + (23,)
+    print("Updated Tuple: (%s, %s, %s, %s, %s)" % newTuple)
+    print("")
+
+    intSet01 = {11.0, 22.0, 33.0, 44.0 }
+    print("Float Set 1: %s" % intSet01)
+    print("")
+
+    print("11 in Set: %s" % (11 in intSet01))
+    print("55 in Set: %s" % (55 in intSet01))
+    print("")
+
+    intSet02 = {44.0, 55.0, 66.0, 77.0 }
+    print("Float Set 1: %s" % intSet01)
+    print("")
+
+    print("11 in Set: %s" % (11 in intSet02))
+    print("55 in Set: %s" % (55 in intSet02))
+    print("")
+
+    intersectionOfSets = intSet01 & intSet02
+    print("Float Sets Intersection: %s" % intersectionOfSets)
+    print("")
+
+    differenceOfSets = intSet01 - intSet02
+    print("Float Sets Difference: %s" % differenceOfSets)
+    print("")
+
+    unionOfSets = intSet01 | intSet02
+    print("Float Sets Union: %s" % unionOfSets)
+    print("")
+
+
+    intDictionary = {
+        '1st': 11,
+        '2nd': 22,
+        '3rd': 33,
+        '4th': 44
+    }
+    print("Int Dictionary: %s" % intDictionary)
+    print("")
+
+    stringListDictionary = {
+        '1st': ["11", "12", "13", "14"],
+        '2nd': ["21", "22", "23", "24"],
+        '3rd': ["31", "32", "33", "34"],
+        '4th': ["41", "42", "43", "44"],
+    }
+    print("Int Dictionary: %s" % stringListDictionary)
+    print("")
+
+    stringListDictionary["1st"].append("15")
+    stringListDictionary["2nd"].append("25")
+    stringListDictionary["3rd"].append("35")
+    stringListDictionary["4th"].append("45")
+
+    print("Adjusted Dictionary: %s" % stringListDictionary)
+
+
+
+# - int list
+
+# - string tuple
+
+# - float set
+
+# - int dict
+
+# - dict string lists
+
+
+# QUESTIONS: Q & A
+
+# NEXT LESSON: What are Python Methods?
+
+# LESSON SUGGESTIONS: https://git.io/JqF3D
+
+
+main()
+
+
+# https://realpython.com/python-data-structures/
