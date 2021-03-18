@@ -1,0 +1,122 @@
+
+# - What are Python Functions/Methods, and how can they be used?
+
+# Hi, today's lesson is going to be on Collections
+
+# - More specifically what are Functions/Methods, and how can they be used?
+
+# In this lesson we will cover:
+
+# The four primary types in the Python programming language are:
+
+# - Functions: A function is a block of code which only runs when it is called.
+
+# - Class Methods: Functions that belong to the class.
+
+# - Static Methods: Functions that belong to the class.
+
+# - Object Methods: Functions that belong to the object.
+
+# - Lambda Function: is a small anonymous function.
+
+from __future__ import print_function
+import random
+
+def prints_name(self):
+    print("Called prints_name")
+    print("")
+
+
+
+class ClassAndStaticMethods:
+
+    @classmethod
+    def prints_name(cls, name):
+        print("Hello %s" % name)
+        print("")
+
+    @staticmethod
+    def random_integer(offset = 0):
+        return random.randint(0, 100 + offset) + offset
+    
+class Mathematics:
+
+    def acceptsLambda(self, anonFunc):
+        print("Lambda Value: %s" % anonFunc(11))
+        print("")
+
+    def factorial(self, number):
+
+        if number == 0:
+            print(1, end='')
+            return 1
+
+        value = number * self.factorial(number - 1)
+        print(", %s" % number, end='')
+
+        return value
+
+
+def main():
+    print("")
+    print("Hello Live Lessons")
+    print("")
+
+    prints_name("John")
+
+    ClassAndStaticMethods.prints_name("John")
+
+    randomInteger = ClassAndStaticMethods.random_integer()
+
+    print("Random Int: %s" % randomInteger)
+    print("")
+
+    randomOffsetInteger = ClassAndStaticMethods.random_integer(50)
+
+    print("Random Offset Int: %s" % randomInteger)
+    print("")
+
+    mathematics = Mathematics()
+
+    x = lambda a : a * 5
+    mathematics.acceptsLambda(x)
+
+    fact5 = mathematics.factorial(5)
+
+    print("\n")
+    print("factorial(5): %s" % fact5)
+    print("")
+
+    fact10 = mathematics.factorial(10)
+
+    print("\n")
+    print("factorial(10): %s" % fact10)
+    print("")
+
+# - Function No Args / No Return
+
+# - Static Method 1 Default Arg
+
+# - Object Method Accepts Lambda
+
+# - Recursion Generating Factorials
+
+# QUESTIONS: Q & A
+
+# NEXT LESSON: What are Python Loops?
+
+# LESSON SUGGESTIONS: https://git.io/JqF3D
+
+
+main()
+
+
+
+# https://realpython.com/instance-class-and-static-methods-demystified/
+
+# https://www.w3schools.com/python/python_functions.asp
+
+# https://www.w3schools.com/python/python_lambda.asp
+
+# https://www.w3schools.com/python/gloss_python_object_methods.asp
+
