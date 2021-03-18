@@ -6,7 +6,7 @@
 
 # The five types of Functions/Methods in the Python programming language are:
 
-# - Functions: A function is a block of code which only runs when it is called.
+# - Basic Functions: A function is a block of code which only runs when it is called.
 
 # - Class Methods: Functions that belong to the class.
 
@@ -14,7 +14,7 @@
 
 # - Object Methods: Functions that belong to the object.
 
-# - Lambda Function: is a small anonymous function.
+# - Lambda Functions: is a small anonymous function.
 
 from __future__ import print_function
 import random
