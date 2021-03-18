@@ -2,11 +2,31 @@
 
 # - More specifically what are Functions/Methods, and how can they be used?
 
-# In this lesson we will cover:
+# IN this lesson we will cover:
+
+# - Function No Args / No Return
+
+# - Class Method 1 Arg
+
+# - Static Method 1 Default Arg
+
+# - Object Method Accepts Lambda
+
+# - Recursion Generating Factorials
 
 # The five types of Functions/Methods in the Python programming language are:
 
+# Note: In previous lessons I mentioned the main function, but here is a breakdown of what exactly it is
+
 # - Basic Functions: A function is a block of code which only runs when it is called.
+
+# -- But it has a name
+
+# -- It can have arguments
+
+# -- It can process statements within its body
+
+# -- It can return a value / or object
 
 # - Class Methods: Functions that belong to the class.
 
