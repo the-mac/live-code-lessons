@@ -20,7 +20,7 @@
 
 # - Basic Functions: A function is a block of code which only runs when it is called.
 
-# -- But it has a name
+# -- It has to have the def keyword prefix and a name
 
 # -- It can have arguments
 
