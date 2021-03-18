@@ -92,6 +92,8 @@ def main():
 
 # - Function No Args / No Return
 
+# - Class Method 1 Arg
+
 # - Static Method 1 Default Arg
 
 # - Object Method Accepts Lambda
