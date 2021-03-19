@@ -17,9 +17,9 @@
 
 # -- While Loop Else
 
-# -- For Loops continue
+# -- For Loop continue
 
-# -- For Loops break
+# -- For Loop break
 
 # -- Nested For Loops return random
 
@@ -130,15 +130,15 @@ def main():
 
 # -- While Loop
 
-# -- While Loop Else
-
 # -- For Loops
 
 # -- Nested For Loops
 
-# -- For Loops continue
+# -- While Loop Else
 
-# -- For Loops break
+# -- For Loop continue
+
+# -- For Loop break
 
 # -- Nested For Loops return random
 
