@@ -1,0 +1,158 @@
+# Hi, today's lesson is going to be on Loops
+
+# - More specifically what are Loops, and how can they be used?
+
+# There are two types of loops, for and while. But, there are many enhancements 
+# to those loops like else statements, range functions that return iterable and
+# general looping on lists. We won't cover looping on lists but focus on loops in
+# specific scenarios with sentinels, and formatting strings.
+
+# So, in this lesson we will cover:
+
+# -- While Loop
+
+# -- For Loops
+
+# -- Nested For Loops
+
+# -- While Loop Else
+
+# -- For Loops continue
+
+# -- For Loops break
+
+# -- Nested For Loops return random
+
+from __future__ import print_function
+import random
+
+
+
+class RunLoops:
+
+    @staticmethod
+    def run_with_while_loop():
+        print("Called run_with_while_loop")
+        print("")
+        response = random.randint(0, 100)
+
+        while response % 4 != 0:
+            print("Random Response: %s" % response)
+            response = random.randint(0, 100)
+        # else:
+        #     print("Final Response Failed On: %s" % response)
+        #     print("")
+
+        print("Final Response: %s" % response)
+        print("")
+
+    # @staticmethod
+    # def run_with_do_while_loop_setup():
+    #     print("Called run_with_do_while_loop_setup")
+    #     print("")
+    #     response = random.randint(0, 100)
+
+    #     while True:
+    #         print("Random Response: %s" % response)
+    #         response = random.randint(0, 100)
+
+    #         if response % 2 == 0:
+    #             break
+
+    #     print("Final Response: %s" % response)
+    #     print("")
+
+    @staticmethod
+    def run_with_for_loops():
+        print("Called run_with_for_loops")
+        print("")
+
+        for index in range(10):
+            # if index == 5:
+            #     continue
+            # el
+            if index == 0:
+                print("%2s" % index, end='')
+            else:
+                print(", %2s" % index, end='')
+            
+        print("")
+
+        for index in range(10, 0, -1):
+            # if index == 5:
+            #     break
+            # el
+            if index == 10:
+                print("%2s" % index, end='')
+            else:
+                print(", %2s" % index, end='')
+
+        print("")
+        print("")
+
+    @staticmethod
+    def run_with_nested_for_loops():
+        print("Called run_with_nested_for_loops")
+        print("")
+
+        # response = random.randint(0, 100)
+        # print("Returning On: %s" % response)
+
+        for iIndex in range(10):
+
+            decimal = iIndex *10
+
+            for jIndex in range(10):
+                
+                total = decimal + jIndex + 1
+
+                if jIndex == 0:
+                    print("%3s" % total, end='')
+                else:
+                    print(", %3s" % total, end='')
+
+                # if response == total:
+                #     return
+
+            print("")
+
+        print("")
+
+def main():
+    print("")
+    print("Hello Live Lessons")
+    print("")
+
+    RunLoops.run_with_while_loop()
+    # RunLoops.run_with_do_while_loop_setup()
+    RunLoops.run_with_for_loops()
+    RunLoops.run_with_nested_for_loops()
+
+# -- While Loop
+
+# -- While Loop Else
+
+# -- For Loops
+
+# -- Nested For Loops
+
+# -- For Loops continue
+
+# -- For Loops break
+
+# -- Nested For Loops return random
+
+# QUESTIONS: Q & A
+
+# NEXT LESSON: What are Python Files?
+
+# LESSON SUGGESTIONS: https:#git.io/JqF3D
+
+
+main()
+
+# https://www.learnpython.org/en/Loops
+
+# https://www.w3schools.com/python/python_for_loops.asp
+
+# https://www.w3schools.com/python/python_while_loops.asp
