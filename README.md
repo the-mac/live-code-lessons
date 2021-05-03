@@ -14,3 +14,17 @@ Watch [Current Java Lessons](https://youtube.com/playlist?list=PL2DoH4geuMIUW0LN
 View [Java Lesson Plan](https://github.com/the-mac/live-code-lessons/projects/1)
 
 Vote on [Upcoming Java Lessons](https://github.com/the-mac/live-code-lessons/issues/1)
+
+
+## Proposed Frameworks / Languages
+
+- [Git/Github Q3/21](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831469840)
+- [Flutter Q3/21](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831471595)
+- [Android Q3/21](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831471650)
+- [iOS Q3/21](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831471723)
+- [Dart](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831461117)
+- [Kotlin](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831461259)
+- [Swift](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831463034)
+- [Objective-C](https://github.com/the-mac/live-code-lessons/issues/3#issuecomment-831463170)
+
+Note: You can upvote the options above or [make a framework/language suggestion here](https://github.com/the-mac/live-code-lessons/issues/3)
