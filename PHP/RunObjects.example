@@ -1,0 +1,118 @@
+# Hi, today's lesson is going to be on PHP Objects
+
+# - More specifically what is a PHP Object, and how can it be used?
+
+# Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function. 
+# So, attributes like Strings are objects, All methods have a built-in attribute __doc__ making them objects as well. 
+
+# In this lesson we will cover:
+
+# - What is an attribute?
+
+# - What is a constructor?
+
+# - What is a method?
+
+# - What is a modifier?
+
+# - What is encapsulation?
+
+# Let's get started:
+
+# - Here is a visual that will help with the Object concept, and it's possible related nouns
+
+# - A shoe can have a sole
+
+# - A shoe can have laces
+
+# - A shoe can be for running / relaxation
+
+class Shoe {
+    private $color;
+    public $hasLaces;
+    protected $isForRunning;
+
+    // CONSTRUCTOR
+    public function __construct($color) {
+        $this->color = $color;
+    }
+
+    // METHODS
+    public function setColor($color) {
+        $this->color = $color;
+    }
+
+    public function setIsForRnning($isForRunning) {
+        $this->isForRunning = $isForRunning;
+    }
+
+    public function __toString() : string {
+        return sprintf(
+            "Shoe Color: %s \nLaces: %s \nRunning:  %s \n",
+            $this->color,
+            $this->hasLaces,
+            $this->isForRunning
+        );
+    }
+}
+
+class Sneaker extends Shoe {
+    
+    // ATTRIBUTES THAT CAN NOT BE ACCESSED
+    // private $color;
+
+    // ATTRIBUTES THAT CAN BE ACCESSED
+    // public $hasLaces;
+    // protected $isForRunning;
+
+    // CONSTRUCTOR
+    public function __construct($color) {
+        $this->setColor($color);
+        $this->isForRunning = true;
+    }
+}
+
+    print("");
+    print("Hello Live Lessons");
+    print("");
+
+    $shoe1 = new Shoe("red");
+    $shoe1->has_laces = true;
+    $shoe1->set_color("green");
+    print($shoe1);
+
+    $shoe2 = new Shoe("blue");
+    $shoe2->set_for_running(true);
+    print($shoe2);
+
+    $sneaker1 = new Sneaker("yellow");
+    $sneaker1->has_laces = true;
+    print($sneaker1);
+
+
+
+# - What is an attribute?
+
+# - What is a constructor?
+
+# - What is a method?
+
+# - What is a modifier?
+
+# - What is encapsulation?
+
+
+# QUESTIONS: Q & A
+
+# Do you have a question about php programming?
+
+# You can ask them live, and get feedback during the lesson. 
+
+# Or, if you have a new topic you are interested in asking questions about, we are taking lesson suggestion here: https://git.io/JqF3D
+
+# NEXT LESSON: What are php data types?
+
+# LESSON SUGGESTIONS: https://git.io/JqF3D
+
+
+main()
