@@ -29,8 +29,8 @@
 
 class Shoe {
     private $color;
-    public $hasLaces;
-    protected $isForRunning;
+    public $hasLaces = FALSE;
+    protected $isForRunning = FALSE;
 
     // CONSTRUCTOR
     public function __construct($color) {
@@ -42,19 +42,21 @@ class Shoe {
         $this->color = $color;
     }
 
-    public function setIsForRnning($isForRunning) {
+    public function setIsForRunning($isForRunning) {
         $this->isForRunning = $isForRunning;
     }
 
     public function __toString() : string {
         return sprintf(
-            "Shoe Color: %s \nLaces: %s \nRunning:  %s \n",
+            "Shoe Color: %s \nLaces: %s \nRunning:  %s \n\n",
             $this->color,
-            $this->hasLaces,
-            $this->isForRunning
+            $this->hasLaces ? 'true' : 'false',
+            $this->isForRunning ? 'true' : 'false'
         );
     }
 }
+
+require_once 'shoe.php';
 
 class Sneaker extends Shoe {
     
@@ -72,21 +74,24 @@ class Sneaker extends Shoe {
     }
 }
 
+    require_once 'shoe.php';
+    require_once 'sneaker.php';
+
     print("");
     print("Hello Live Lessons");
-    print("");
+    print("\n\n");
 
     $shoe1 = new Shoe("red");
-    $shoe1->has_laces = true;
-    $shoe1->set_color("green");
+    $shoe1->hasLaces = true;
+    $shoe1->setColor("green");
     print($shoe1);
 
     $shoe2 = new Shoe("blue");
-    $shoe2->set_for_running(true);
+    $shoe2->setIsForRunning(true);
     print($shoe2);
 
     $sneaker1 = new Sneaker("yellow");
-    $sneaker1->has_laces = true;
+    $sneaker1->hasLaces = true;
     print($sneaker1);
 
 
