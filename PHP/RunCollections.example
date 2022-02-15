@@ -1,129 +1,137 @@
 <?php
+// Hi, today's lesson is going to be on PHP Array Types
 
-
-    // Hi, today's lesson is going to be on PHP Array Types (Numerical, Associative & Multi-Dimensional)
-
-    // - More specifically what are are Arrays, and how can they be used?
+    // - More specifically what are the PHP Arrays, and how can they be used?
 
     // In this lesson we will cover:
 
-    // The three Array data types in the PHP programming language. amd combinations of them:
-
-    // - Array is a collection of data which is numerically ordered. Similar to a lobby with one elevator.
- 
-    // - Dictionary is a collection of data which is unordered and has keys and values. No duplicate keys can exists. Similar to a being assigned a desk at school.
-
-    // - Array of Arrays is a collection of data which is ordered. Similar to a lobby with multiple elevators, that don't move from left to right.
-
-    // - Dictionary of Arrays is a collection of data which is unordered and has keys and array values. Similar to a being assigned an elevator in a lobby with multiple elevators.
+    // The two primary Array data types in the PHP programming language, but we will cover combinations of them:
 
     // - What are PHP Arrays, and how can they be used?
 
     // clear && printf '\e[3J' && php arrays.php
 
-    // INT ARRAY
+
+    // - Integer Array
+    // - A Numeric Array is a collection of data which is numerically ordered. Similar to a hotel with one elevator.
+
     $intArray = [];
     $intArray[] = 11;
     $intArray[] = 22;
     $intArray[] = 33;
     $intArray[] = 44;
 
-    // ANOTHER INT ARRAY
     $anotherIntArray = $intArray;
-
-    // YET ANOTHER INT ARRAY
-    $yetAnotherIntArray = array(44, 33, 22, 11);
-
-    print("Int Array: ");
+    print("===== Numeric ");
     print_r($intArray);
+
+    print("Int Array Length: ");
+    print(count($intArray));
     print(PHP_EOL);
-    print("Int Array Length: " . count($intArray));
-    print(PHP_EOL . PHP_EOL);
 
     unset($intArray[1]);
-    $intArray[] = 23;
-
-    print("Adjusted Array: ");
+    print("Updated Numeric ");
     print_r($intArray);
     print(PHP_EOL);
 
-    print("Fixed Array: ");
-    print_r(array_values($intArray));
+    print("Indices Fixed For ");
+    $intArray = array_values($intArray);
+    print_r($intArray);
     print(PHP_EOL);
 
-    // ARRAY OF MULTIPLE ARRAYS
-    print("Array Of Int Array: ");
+    // - Multi-Dimensional Integer Array
+    // - A Multi-Dimensional Array is an Array of Arrays. Or a collection of Arrays which is ordered. Similar to a hotel with multiple elevators.
     $multiDimensionalArray = [
+        array(44, 33, 22, 11),
         $anotherIntArray,
-        $yetAnotherIntArray,
         $intArray
     ];
+    print("===== Multi-Dimensional ");
     print_r($multiDimensionalArray);
     print(PHP_EOL);
 
-    unset($multiDimensionalArray[0][1]);
-    $multiDimensionalArray[0][] = 24;
-
-    print("Adjusted Multiple Dimension Array: ");
-    print_r($intArray);
+    print("Multi-Dimensional Array Length: ");
+    print(count($multiDimensionalArray));
     print(PHP_EOL);
 
-    print("Fixed Multiple Dimension Array: ");
-    $multiDimensionalArray[0] = array_values($multiDimensionalArray[0]);
+    $multiDimensionalArray[1][] = 55;
+    print("Updated Multi-Dimensional ");
     print_r($multiDimensionalArray);
     print(PHP_EOL);
 
-    $intDictionary = [
+    print("Multi-Dimensional Array Length[1]: ");
+    print(count($multiDimensionalArray[1]));
+    print(PHP_EOL.PHP_EOL);
+
+    // - Integer Value Associative Array
+    // - An Associative Array is a Dictionary that is unordered and has keys and values. No duplicate keys can exists. Similar to a being assigned a desk at school.
+    $intAssociativeArray = [
         '1st' => 11,
         '2nd' => 22,
         '3rd' => 33,
         '4th' => 44
     ];
 
-    print("Int Value Dictionary: ");
-    print_r($intDictionary);
+    print("===== Int Value Associative ");
+    print_r($intAssociativeArray);
     print(PHP_EOL);
 
-    unset($intDictionary['2nd']);
-    $intDictionary['5th'] = 55;
-
-    print("Adjusted Dictionary: ");
-    print_r($intDictionary);
+    print("Keys For Associative ");
+    print_r(array_keys($intAssociativeArray));
     print(PHP_EOL);
 
-    $stringArrayDictionary = [
+    unset($intAssociativeArray['2nd']);
+    $intAssociativeArray['5th'] = 55;
+
+    print("Adjusted Associative ");
+    print_r($intAssociativeArray);
+    print(PHP_EOL);
+
+    print("Keys For Associative ");
+    print_r(array_keys($intAssociativeArray));
+    print(PHP_EOL);
+
+    // - String Array Value Associative Array
+    // - An Associative Array of Arrays is a Dictionary that is unordered and has keys and array values. No duplicate keys can exists. Similar to a being assigned a cargo elevator in a hotel/apartment complex with multiple elevators.
+    $stringArrayAssociativeArray = [
         '1st' => ["11", "12", "13", "14"],
         '2nd' => ["21", "22", "23", "24"],
         '3rd' => ["31", "32", "33", "34"],
         '4th' => ["41", "42", "43", "44"],
     ];
 
-    print("String Array Dictionary: ");
-    print_r($stringArrayDictionary);
+    print("===== String Array Value Associative ");
+    print_r($stringArrayAssociativeArray);
     print(PHP_EOL);
 
-    $stringArrayDictionary["1st"][] = "15";
-    $stringArrayDictionary["2nd"][] = "25";
-    $stringArrayDictionary["3rd"][] = "35";
-    $stringArrayDictionary["4th"][] = "45";
+    $stringArrayAssociativeArray["1st"][] = "15";
+    $stringArrayAssociativeArray["2nd"][] = "25";
+    $stringArrayAssociativeArray["3rd"][] = "35";
+    $stringArrayAssociativeArray["4th"][] = "45";
 
-    print("Adjusted Dictionary: ");
-    print_r($stringArrayDictionary);
+    print("Updated String Array Values Associative ");
+    print_r($stringArrayAssociativeArray);
     print(PHP_EOL);
 
+    $stringArray = array_merge($stringArrayAssociativeArray["1st"], $stringArrayAssociativeArray["2nd"]);
+    $stringArray = array_merge($stringArray, $stringArrayAssociativeArray["3rd"]);
+    $stringArray = array_merge($stringArray, $stringArrayAssociativeArray["4th"]);
+    
+    print("Merged String ");
+    print_r($stringArray);
+    print(PHP_EOL);
 
+    // PHP REFERENCES USED IN THIS LESSON
+    // - print(...): https://www.php.net/manual/en/function.print.php
+    // - print_r(...): https://www.php.net/manual/en/function.print-r.php
+    // - PHP_EOL: https://www.php.net/manual/en/reserved.constants.php
+    // - count(...): https://www.php.net/manual/en/function.count.php
+    // - unset(...): https://www.php.net/manual/en/function.unset.php
+    // - array_values(...): https://www.php.net/manual/en/function.array-values.php
+    // - array_merge(...): https://www.php.net/manual/en/function.array-merge.php
 
-// - integer Array
+    // QUESTIONS: Q & A
 
-// - multi-dimensional integer array
-
-// - int value dictionary
-
-// - dictionary of string lists
-
-
-// QUESTIONS: Q & A
-
-// NEXT LESSON: What are PHP Collections?
+    // NEXT LESSON: What are PHP Collections?
 
 ?>
