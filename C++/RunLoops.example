@@ -1,0 +1,224 @@
+// C++ Loops Example
+
+// clear && printf '\e[3J' && g++ Loops.cpp -o Loops
+
+// clear && printf '\e[3J' && ./Loops
+
+#include <iostream>
+#include <string>
+#include <stdlib.h> /* srand, rand */
+#include <time.h>   /* time */
+using namespace std;
+
+// - What are C++ Loops, and how can they be used?
+
+class RunLoops {
+
+public:
+    static void printFormatted(string format, int input) {
+        char resultString[5];
+        sprintf(resultString, format.c_str(), input);
+        cout << resultString;
+    }
+    
+    static void runWithWhileLoop() {
+
+        cout << "Called runWithWhileLoop" << endl << endl;
+
+        // GENERATE RANDOM NUMBER response
+        srand(time(NULL) - 100);
+        int response = rand() % 100;
+
+        // LOOP ON WHETHER THE response IS DIVISIBLE BY 4
+        while (response % 4 != 0)
+        {
+            // DISPLAY THE CURRENT response
+            cout << "Random Response: " << response << endl << endl;
+
+            // GENERATE RANDOM NUMBER response
+            response = rand() % 100;
+        }
+
+        // DISPLAY THE FINAL response
+        cout << "Final Response: " << response << endl << endl;
+    }
+
+    static void runWithDoWhileLoop() {
+
+        cout << "Called runWithDoWhileLoop" << endl << endl;
+
+        // GENERATE RANDOM NUMBER response
+        srand(time(NULL) + 100);
+        int response = rand() % 100;
+
+        // LOOP ON WHETHER THE response IS DIVISIBLE BY 2
+        do
+        {
+            // DISPLAY THE CURRENT response
+            cout << "Random Response: " << response << endl << endl;
+
+            // GENERATE RANDOM NUMBER response
+            response = rand() % 100;
+        } while (response % 2 != 0);
+
+        // DISPLAY THE FINAL response
+        cout << "Final Response: " << response << endl << endl;
+    }
+    
+    static void runWithForLoops() {
+
+        cout << "Called runWithForLoops" << endl << endl;
+
+        // FOR LOOP ON index
+        for (int index = 0; index < 10; index++)
+        {
+            if (index == 5)
+            {
+                continue;
+            }
+            else if (index == 0)
+            {
+                // PRINT THE index
+                printFormatted("%2d", index);
+            }
+            else
+            {
+                // PRINT THE index, WITH A ","
+                printFormatted(", %2d", index);
+            }
+        }
+        
+        cout << endl << endl;
+
+        // FOR LOOP ON index
+        for (int index = 10; index >= 1; index--)
+        {
+            if (index == 5)
+            {
+                break;
+            }
+            else if (index == 10)
+            {
+                // PRINT THE index
+                printFormatted("%2d", index);
+            }
+            else
+            {
+                // PRINT THE index, WITH A ","
+                printFormatted(", %2d", index);
+            }
+        }
+        
+        cout << endl << endl;
+
+    }
+
+    static void runWithNestedForLoops() {
+        /*
+            System.out.println("Called runWithNestedForLoops");
+
+            Random random = new Random();
+            int response = random.nextInt(100);
+
+            System.out.println("Returning On: " + response);
+            System.out.println();
+
+            // FOR LOOP ON iIndex
+            for(int iIndex = 0; iIndex < 10; iIndex++) {
+
+                int decimal = iIndex * 10;
+
+                // FOR LOOP ON jIndex
+                for(int jIndex = 0; jIndex < 10; jIndex++) {
+
+                    int sum = decimal + jIndex + 1;
+
+                    if(jIndex == 0) {
+                        // PRINT THE sum
+                        System.out.printf("%3d", sum);
+                    } else {
+                        // PRINT THE sum, WITH A ","
+                        System.out.printf(", %3d", sum);
+                    }
+
+                    if(response == sum) {
+                        return;
+                    }
+                }
+                System.out.println();
+            }
+        }
+
+        */
+
+        cout << "Called runWithNestedForLoops" << endl << endl;
+
+        srand(time(NULL));
+        int response = rand() % 100;
+
+        cout << "Returning on " << response << endl << endl;
+
+        // FOR LOOP ON iIndex
+        for (int iIndex = 0; iIndex < 10; iIndex++) {
+
+            int decimal = iIndex * 10;
+
+            // FOR LOOP ON jIndex
+            for (int jIndex = 0; jIndex < 10; jIndex++) {
+                
+                int sum = decimal + jIndex + 1;
+
+                if(jIndex == 0) {
+                    // PRINT THE sum
+                    printFormatted("%3d", sum);
+                } else {
+                    // PRINT THE sum, WITH A ","
+                    printFormatted(", %3d", sum);
+                }
+
+                if(response == sum) {
+                    cout << endl << endl;
+                    return;
+                }
+            }
+        
+            cout << endl << endl;
+
+        }
+    }
+
+};
+
+int main(int argc, char const *argv[])
+{
+    RunLoops::runWithWhileLoop();
+    RunLoops::runWithDoWhileLoop();
+    RunLoops::runWithForLoops();
+    RunLoops::runWithNestedForLoops();
+
+    return 0;
+}
+
+// -- While Loop
+
+// -- Do While Loop
+
+// -- For Loops
+
+// -- For Loops continue
+
+// -- For Loops break
+
+// -- Nested For Loops
+
+// -- Nested For Loops return random
+
+// QUESTIONS: Q & A
+
+// NEXT LESSONS (0): What is a C++ File?
+
+// NEXT LESSONS (1): What are C++ Property Files?
+
+// NEXT LESSONS (2): UNKNOWN(SQL, Threads, Inheritance, Regex, SUGGESTIONS)?
+
+// LESSON SUGGESTIONS: https://git.io/JqCKt
